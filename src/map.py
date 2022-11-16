@@ -7,6 +7,7 @@ from .config import grid_size
 class Map:
     def __init__(self, countries_data):
         self.countries = []
+        self.full = False
         self.grid: List[List[City]] = [[None] * (grid_size + 2) for i in range((grid_size + 2))]
         self.__initialize_grid(countries_data)
         self.__validate_foreign_neighbours()
@@ -16,8 +17,7 @@ class Map:
         if len(self.countries) == 1:
             self.countries[0].only_country_mode()
             return
-
-        full = False
+        
         day = 1
         while not full:
             for x in range(grid_size + 1):
