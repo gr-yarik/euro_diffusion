@@ -3,6 +3,7 @@ from src import Map, parse_input
 
 if __name__ == "__main__":
     cases = []
+    
     try:
         cases = parse_input()
     except Exception as e:
