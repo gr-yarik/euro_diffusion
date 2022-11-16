@@ -44,7 +44,7 @@ class Map:
         self.countries.sort()
 
     def __initialize_grid(self, countries_data) -> None:
-        # go through every country and put it's cities on the grid
+        # go through every country and put its cities on the grid
         for country_data in countries_data:
             country = Country(country_data["name"])
             for x in range(country_data["ll"]["x"], country_data["ur"]["x"] + 1):
