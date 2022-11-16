@@ -14,7 +14,7 @@ class Map:
     def simulate_euro_diffusion(self) -> None:
         # check length of countries, if it's 1, country is already full
         if len(self.countries) == 1:
-            self.countries[0].only_county_mode()
+            self.countries[0].only_country_mode()
             return
 
         full = False
