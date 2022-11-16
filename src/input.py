@@ -10,7 +10,8 @@ def read_lines(filepath):
 
 def parse_country(line):
     args = line.split(' ')
-    if len(args) != 5:
+    len_limit = 5
+    if len(args) != len_limit:
         raise Exception("Error at line {%s}: invalid number of tokens" % line)
     name_pattern = re.compile("[A-Z][a-z]{1,24}$")
     if not name_pattern.match(args[0]):
