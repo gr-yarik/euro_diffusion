@@ -49,7 +49,7 @@ def parse_input():
         line_index += 1
 
         countries_list = []
-        for j in range(counties_len):
+        for _ in range(counties_len):
             parsed = parse_country(lines[line_index])
             countries_list.append(parsed)
             line_index += 1
